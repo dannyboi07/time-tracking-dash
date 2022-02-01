@@ -1,0 +1,311 @@
+:root {
+  /* Primary colors */
+  --prim-blue-work: hsl(15, 100%, 70%);
+  --prim-soft-blue-play: hsl(195, 74%, 62%);
+  --prim-light-red-study: hsl(348, 100%, 68%);
+  --prim-light-green-exercise: hsl(145, 58%, 55%);
+  --prim-violet-social: hsl(264, 64%, 52%);
+  --prim-soft-orange-selfcare: hsl(43, 84%, 65%);
+  /* Neutral*/
+  --neu-vdark-blue: hsl(226, 43%, 10%);
+  --neu-dark-blue: hsl(235, 46%, 20%);
+  --neu-desat-blue: hsl(236, 65%, 59%);
+  --neu-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--neu-vdark-blue);
+}
+
+.master-container {
+  width: 85%;
+  min-width: 820px;
+  max-width: 1150px;
+  height: 485px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.master-container .options-container {
+  width: 22.5%;
+  min-width: 200px;
+  background-color: var(--neu-dark-blue);
+  color: white;
+  border-radius: 1em;
+}
+
+.master-container .options-container .options-upper-container {
+  background-color: var(--neu-desat-blue);
+  border-radius: 1em;
+  height: 70%;
+}
+
+.master-container .options-container .options-upper-container .options-profile-container {
+  border-radius: 1em;
+  height: 100%;
+}
+
+.master-container .options-container .options-upper-container .options-profile-container p {
+  margin: 2em 1em 1em 2em;
+  color: var(--neu-pale-blue);
+}
+
+.master-container .options-container .options-upper-container .options-profile-container h1 {
+  margin: 0.5em 1em 2em 1em;
+  font-weight: 300;
+}
+
+.master-container .options-container .options-upper-container .options-profile-container img {
+  margin: 2em 0 0 2em;
+  width: clamp(40px, 50%, 75px);
+  height: auto;
+}
+
+.master-container .options-container ul {
+  padding: 0.5em 0;
+  list-style-type: none;
+  padding-left: 1.75em;
+}
+
+.master-container .options-container ul li {
+  margin: 1.25em 0;
+}
+
+.master-container .options-container ul li a {
+  color: var(--neu-pale-blue);
+  text-decoration: none;
+  -webkit-transition: color 0.35s;
+  transition: color 0.35s;
+}
+
+.master-container .options-container ul li a:hover {
+  color: white;
+  -webkit-transition: color 0.35s;
+  transition: color 0.35s;
+}
+
+.master-container .stats-container {
+  width: 850%;
+  max-width: 850px;
+  border: 1px solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 1.5em;
+  margin-left: 1.5em;
+}
+
+.master-container .stats-container .bgdiv {
+  position: relative;
+  border-radius: 1em;
+  height: 191.59px;
+}
+
+.master-container .stats-container .bgdiv .bgimgCtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+}
+
+.master-container .stats-container .bgdiv .bgimgCtn .bgimg {
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.master-container .stats-container .bgdiv .fgdiv {
+  background-color: var(--neu-dark-blue);
+  border-radius: 1em;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .head-ellipse {
+  width: 90%;
+  margin: 2em 0 2em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .head-ellipse h4 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 500;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .head-ellipse img {
+  margin-bottom: 0.25em;
+  margin-right: 2.5em;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .stat-div {
+  margin-left: 2em;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .stat-div h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 300;
+}
+
+.master-container .stats-container .bgdiv .fgdiv .stat-div p {
+  font-size: 0.9rem;
+  color: var(--neu-pale-blue);
+  margin-top: 1em;
+}
+
+.master-container .stats-container .work {
+  background-color: var(--prim-blue-work);
+}
+
+.master-container .stats-container .play {
+  background-color: var(--prim-soft-blue-play);
+}
+
+.master-container .stats-container .study {
+  background-color: var(--prim-light-red-study);
+}
+
+.master-container .stats-container .exercise {
+  background-color: var(--prim-light-green-exercise);
+}
+
+.master-container .stats-container .social {
+  background-color: var(--prim-violet-social);
+}
+
+.master-container .stats-container .self-care {
+  background-color: var(--prim-soft-orange-selfcare);
+}
+
+.nav-active {
+  color: white !important;
+}
+
+@-webkit-keyframes fgdiv-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  35% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  70% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  85% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  100% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+}
+
+@keyframes fgdiv-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  35% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  70% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  85% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+  100% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    -webkit-animation-timing-function: ease-in-out 0.9s;
+            animation-timing-function: ease-in-out 0.9s;
+  }
+}
+
+.fgdiv {
+  -webkit-animation-name: fgdiv-anim;
+          animation-name: fgdiv-anim;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+}
+
+.fgdiv-anim {
+  -webkit-transform: translateY(20%) !important;
+          transform: translateY(20%) !important;
+  -webkit-animation-name: fgdiv-anim;
+          animation-name: fgdiv-anim;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+}
+/*# sourceMappingURL=style.css.map */

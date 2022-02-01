@@ -1,0 +1,244 @@
+:root {
+    /* Primary colors */
+    --prim-blue-work: hsl(15, 100%, 70%);
+    --prim-soft-blue-play: hsl(195, 74%, 62%);
+    --prim-light-red-study: hsl(348, 100%, 68%);
+    --prim-light-green-exercise: hsl(145, 58%, 55%);
+    --prim-violet-social: hsl(264, 64%, 52%);
+    --prim-soft-orange-selfcare: hsl(43, 84%, 65%);
+
+    /* Neutral*/ 
+    --neu-vdark-blue: hsl(226, 43%, 10%);
+    --neu-dark-blue: hsl(235, 46%, 20%);
+    --neu-desat-blue: hsl(236, 65%, 59%);
+    --neu-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--neu-vdark-blue);
+}
+
+.master-container {
+    width: 85%;
+    min-width: 820px;
+    max-width: 1150px;
+    height: 485px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .options-container {
+        width: 22.5%;
+        min-width: 200px;
+        // border: 1px solid;
+        background-color: var(--neu-dark-blue);
+        color: white;
+        border-radius: 1em;
+
+        .options-upper-container {
+            background-color: var(--neu-desat-blue);
+            border-radius: 1em;
+            height: 70%;
+            
+            .options-profile-container {
+
+                // border: 1px solid red;
+                border-radius: 1em;
+                height: 100%;
+                // padding: 1.5em 0 0 1.5em;
+
+                p {
+                    margin: 2em 1em 1em 2em;
+                    color: var(--neu-pale-blue);
+                }
+
+                h1 {
+                    // width: 85%;
+                    margin: 0.5em 1em 2em 1em;
+                    font-weight: 300;
+                }
+
+                img {
+                    margin: 2em 0 0 2em;
+                    width: clamp(40px, 50%, 75px);
+                    height: auto;
+                }
+            }
+        }
+
+        ul {
+            padding: 0.5em 0;
+            list-style-type: none;
+            padding-left: 1.75em;
+            li {
+                margin: 1.25em 0;
+                a {
+                    color: var(--neu-pale-blue);
+                    text-decoration: none;
+                    transition: color 0.35s;
+
+                    &:hover {
+                        color: white;
+                        transition: color 0.35s;
+                    }
+                }
+            }
+        }
+    }
+
+    .stats-container {
+        width: 850%;
+        max-width: 850px;
+        border: 1px solid;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1.5em;
+        margin-left: 1.5em;
+
+        .bgdiv {
+            position: relative;
+            border-radius: 1em;
+            height: 191.59px;
+
+            .bgimgCtn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 30%;
+                overflow: hidden;
+            
+                .bgimg {
+                    position: absolute;
+                    top: -10px;
+                    right: 0;
+                }
+            
+            }
+
+            .fgdiv {
+                background-color: var(--neu-dark-blue);
+                border-radius: 1em;
+                color: white;
+                // border: 1px solid red;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(0%);
+                transition: transform 0.5s;
+
+                .head-ellipse {
+                    width: 90%;
+                    margin: 2em 0 2em 2em;
+                    display: flex;
+                    justify-content: space-between;
+
+                    h4 {
+                        font-size: clamp( 1rem, 1.5vw, 1.125rem);
+                        font-weight: 500;
+                    }
+
+                    img {
+                        margin-bottom: 0.25em;
+                        margin-right: 2.5em;
+                    }
+                }
+
+                .stat-div {
+                    margin-left: 2em;
+
+                    h1 {
+                        font-size: clamp(2rem, 3vw, 2.5rem);
+                        font-weight: 300;
+                    }
+
+                    p {
+                        font-size: 0.9rem;
+                        color: var(--neu-pale-blue);
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+
+        .work {
+            background-color: var(--prim-blue-work);
+        }
+
+        .play {
+            background-color: var(--prim-soft-blue-play);
+        }
+
+        .study {
+            background-color: var(--prim-light-red-study);
+        }
+
+        .exercise {
+            background-color: var(--prim-light-green-exercise);
+        }
+
+        .social {
+            background-color: var(--prim-violet-social);
+        }
+
+        .self-care {
+            background-color: var(--prim-soft-orange-selfcare);
+        }
+    }
+}
+
+.nav-active {
+    color: white !important;
+}
+
+@keyframes fgdiv-anim {
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+    35% {
+        transform: translateY(25%);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+    50% {
+        transform: translateY(10%);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+    70% {
+        transform: translateY(20%);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+    85% {
+        transform: translateY(15%);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+    100% {
+        transform: translateY(20%);
+        animation-timing-function: ease-in-out 0.9s;
+    }
+}
+
+.fgdiv {
+    animation-name: fgdiv-anim;
+    animation-duration: 0.9s;
+}
+
+.fgdiv-anim {
+    transform: translateY(20%) !important;
+    animation-name: fgdiv-anim;
+    animation-duration: 0.9s;
+}
