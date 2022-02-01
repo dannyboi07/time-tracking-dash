@@ -209,7 +209,7 @@ function displayBlocks(type) {
     
             } else {
                 if (type == "daily") lastNo = value, paraText = "Yesterday - "; //dayTime.textContent = `Yesterday - ${value}hrs`
-                else if (type == "weekly") lastNo = value, paraText = "Last week - "; //dayTime.textContent = `Last Week - ${value}hrs`
+                else if (type == "weekly") lastNo = value, paraText = "Last Week - "; //dayTime.textContent = `Last Week - ${value}hrs`
                 else if (type == "monthly") lastNo = value, paraText = "Last Month - "; //dayTime.textContent = `Last Month - ${value}hrs`
             }
             // console.log(`${key}: ${value}`);
