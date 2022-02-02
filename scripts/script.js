@@ -10,11 +10,23 @@ window.onload = () => {
 
     displayBlocks("daily");
     setTimeout(() => {
+      const optionsCtn = document.getElementById("optionsCtn");
+      const upperCtn = document.getElementById("upperCtn");
+      optionsCtn.classList.add("options-ctn-anim");
+      upperCtn.classList.add("upper-ctn-anim");
+
       const allBlocks = document.getElementsByClassName("fgdiv");
       for (let block of allBlocks) block.classList.add("fgdiv-anim");
     }, 1);
 };
 
+// window.addEventListener("resize", function() {
+//     if (window.screen.width < 481) {
+//       let vh = window.innerHeight * 0.01;
+//       const html = document.getElementsByTagName("html");
+//       html[0].style.height = `${vh}vh`
+//     }
+// })
 const data = [
     {
       "title": "Work",
@@ -185,6 +197,7 @@ function displayBlocks(type) {
         const fgHead = document.createElement("h4");
         
         const ellipseCtn = document.createElement("a");
+        ellipseCtn.href = "#";
         const ellipse = document.createElement("img");
         ellipse.src = "./images/icon-ellipsis.svg";
         ellipse.alt = "Ellipse Image";
@@ -265,6 +278,14 @@ function displayBlocks(type) {
           animateValue(`daytime${i}`, 0, lastNo, 900, paraText);
         }, 1);
 
+        ellipseCtn.addEventListener("mouseover", () => {
+          fgDiv.style.backgroundColor = "hsl(235, 46%, 20%)";
+        });
+
+        ellipseCtn.addEventListener("mouseleave", () => {
+          fgDiv.style = undefined;
+        })
+
 
         // fgDiv.classList.add("fgdiv-anim")
     };
@@ -304,7 +325,6 @@ function animateValue(id, start, end, duration, option) {
   // assumes integer values for start and end
   
   var obj = document.getElementById(id);
-  console.log(obj)
   var range = end - start;
   // no timer shorter than 50ms (not really visible any way)
   var minTimer = 50;
