@@ -447,7 +447,7 @@ body {
     font-size: 1.15rem;
   }
   .master-container .stats-container .bgdiv .fgdiv .head-ellipse a {
-    margin-right: 0.75em;
+    margin-right: 1em;
   }
   .master-container .stats-container .bgdiv .fgdiv .stat-div {
     display: -webkit-box;
