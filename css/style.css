@@ -21,7 +21,6 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: var(--neu-vdark-blue);
 }
 
 .master-container {
@@ -171,7 +170,7 @@ body {
 
 .master-container .stats-container .bgdiv .fgdiv .head-ellipse {
   width: 90%;
-  margin: 2em 0 2em 2em;
+  margin: 2em 0 1.25em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,7 +194,7 @@ body {
 }
 
 .master-container .stats-container .bgdiv .fgdiv .stat-div h1 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3rem);
   font-weight: 300;
 }
 
@@ -376,7 +375,6 @@ body {
   .master-container .options-container {
     width: 100%;
     min-height: 125px;
-    z-index: 99;
   }
   .master-container .options-container .options-upper-container {
     width: 100%;
